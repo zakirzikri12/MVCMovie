@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcMovie.Areas.Identity.Data;
 
@@ -11,9 +12,10 @@ using MvcMovie.Areas.Identity.Data;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(DBContextSample))]
-    partial class DBContextSampleModelSnapshot : ModelSnapshot
+    [Migration("20240312072549_AdditionalFields")]
+    partial class AdditionalFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
